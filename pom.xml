@@ -70,7 +70,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.2</version>
                 <configuration>
-                    <argLine>@{argLine} -javaagent:"${settings.localRepository}/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar"</argLine>                </configuration>
+                    <argLine>@{argLine} -javaagent:"${settings.localRepository}/org/mockito/mockito-core/5.17.0/mockito-core-5.17.0.jar"
+                        -Xshare:off</argLine>
+                </configuration>
             </plugin>
         </plugins>
     </build>
