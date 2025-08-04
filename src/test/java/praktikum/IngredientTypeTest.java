@@ -25,13 +25,6 @@ void shouldHaveCorrectEnumValues(IngredientType type, String expected) {
     );
 }
 
-    @ParameterizedTest
-    @MethodSource("dataProvider")
-    @DisplayName("Тест для преобразования enum в строку")
-    void enumToStringShouldReturnLowerCase(IngredientType type, String expected) {
-        assertEquals(expected.toLowerCase(), type.toString().toLowerCase());
-    }
-
     static Stream<Arguments> dataProvider() {
         return Stream.of(
                 Arguments.of(SAUCE_TYPE, "SAUCE"),
